@@ -1,0 +1,60 @@
+//@sourceMappingURL: common.css.map
+@import "libs/_normalize";
+@import "jeet/_index";
+@import "_vars";
+
+//@include edit();
+
+html,
+body {
+	width: 100%;
+	font-size: $size-font-base;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: $color-text-default;
+}
+
+h1.site-name {
+	font-size: 1.6rem;
+	color: $color-text-default;
+	margin-top: 0;
+}
+header > .inner,
+main {
+	@include center(970px, 15px);
+}
+
+nav {
+	ul {
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+	}
+}
+header {
+	nav {
+		margin: 0 auto;
+		li {
+			display: inline-block;
+			a {
+				display: block;
+				padding: 10px 15px;
+				text-decoration: none;
+				background-color: #c7c1ba;
+				color: #dddddd;
+				&.active {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
+
+body > header,
+body > footer {
+	min-height: 50px;
+	background-color: #dedede;
+}

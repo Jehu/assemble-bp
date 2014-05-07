@@ -1,0 +1,11 @@
+{
+    "title": "Marco's statische Testseite",
+    "author": {
+        "name": "Marco Michely",
+        "twitter": "@jehu"
+    },
+    "meta": {
+        "description": "Bli bla blub",
+        "keywords": "Site, Boilerplate"
+    }
+}

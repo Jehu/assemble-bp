@@ -1,0 +1,26 @@
+{
+  "name": "assemble-site-boilerplate",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/js/vendors",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "Naver": "~3.0.7",
+    "jQuery": "~2.1.0",
+    "normalize-css": "~3.0.1"
+  },
+  "exportsOverride": {
+    "*": {
+      "js": "**/*.js",
+      "css": "**/*.css",
+      "scss": "**/*.scss",
+      "img": "**/*.png"
+    }
+  }
+}

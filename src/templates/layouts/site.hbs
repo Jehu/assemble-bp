@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ site.title }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="description" content="{{ site.meta.description }}" />
+    <meta name="keywords" content="{{ site.meta.keywords }}" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--link rel="dns-prefetch" href="//fonts.googleapis.com" /-->
+
+    {{#dev}}
+    <link rel="stylesheet" href="css/main.css" />
+    {{/dev}}
+    {{#prod}}
+    <link rel="stylesheet" href="css/main.min.css" />
+    {{/prod}}
+
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="inner">
+		  <h1 class="site-name">{{ site.title }}</h1>
+		  <nav>
+			<ul>
+				{{#each  pages }}
+				<li><a href="{{autolink}}" {{isActive}}>{{data.titel}}</a></li>
+				{{/each}}
+			</ul>
+		  </nav>
+	  </div>
+    </header>
+    <main role="main" class="main-container">
+	  {{#markdown}}
+        {{>body}}
+      {{/markdown}}
+
+    </main>
+    <footer class="site-footer">
+		<p>footer</p>
+    </footer>
+
+    <!--script data-src="main" src="js/require.js"></script-->
+    {{#dev}}
+    <script src="js/vendor/jquery/dist/jquery.js"></script>
+    <script src="js/vendor/Naver/jquery.fs.naver.js"></script>
+    <script src="js/script.js"></script>
+    {{/dev}}
+    {{#prod}}
+    <script src="js/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="js/vendor/Naver/jquery.fs.naver.min.js"></script>
+    <script src="js/script.min.js"></script>
+    {{/prod}}
+  </body>
+</html>
